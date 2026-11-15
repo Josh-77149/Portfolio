@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Josué Bolombo — Acteur de cinéma</title>
+<meta name="description" content="Site officiel de Josué Bolombo, acteur de cinéma : films, scénarios et contact.">
+<meta property="og:title" content="Josué Bolombo — Acteur de cinéma">
+<meta property="og:description" content="Films, scénarios et contact.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#films">Aller au contenu</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="#accueil" aria-label="Josué Bolombo, accueil">JB</a>
+    <nav aria-label="Navigation principale">
+      <a href="#apropos">À propos</a>
+      <a href="#films">Films</a>
+      <a href="#ecrits">Écrits</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="accueil">
+  <section class="hero">
+    <div class="wrap heroGrid">
+      <div class="heroText">
+        <p class="role">Acteur de cinéma</p>
+        <h1>Josué<span>Bolombo</span></h1>
+        <p class="lead">Des films à regarder, des scénarios à lire. Tout ce que je tourne et écris, au même endroit.</p>
+        <div class="actions">
+          <a class="btn" href="#films">Voir les films</a>
+          <a class="btn ghost" href="#ecrits">Lire les scénarios</a>
+        </div>
+      </div>
+      <figure class="portrait">
+        <img src="img/josue.jpg" alt="Portrait de Josué Bolombo" width="800" height="1000" fetchpriority="high"
+             onerror="this.closest('figure').classList.add('empty');this.remove()">
+        <span class="initials" aria-hidden="true">JB</span>
+      </figure>
+    </div>
+  </section>
+
+  <section id="apropos">
+    <div class="wrap two">
+      <h2>À propos</h2>
+      <div class="prose">
+        <p>Josué Bolombo est acteur de cinéma. Il joue, écrit et partage ses projets directement avec son public.</p>
+        <p>Ce site rassemble ses films, ses scénarios et ses nouveautés. Pour une collaboration ou une proposition de rôle, utilisez le formulaire de contact.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="films">
+    <div class="wrap">
+      <h2>Films</h2>
+      <div id="filmsList" class="films" aria-live="polite"><p class="note">Chargement des films…</p></div>
+    </div>
+  </section>
+
+  <section id="ecrits">
+    <div class="wrap">
+      <h2>Scénarios et articles</h2>
+      <div id="articlesList" class="list" aria-live="polite"><p class="note">Chargement des textes…</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap two">
+      <div>
+        <h2>Contact</h2>
+        <p class="note">Collaboration, rôle, presse : écrivez-moi, je réponds personnellement.</p>
+      </div>
+      <form id="contactForm" novalidate>
+        <label>Nom
+          <input name="nom" required maxlength="100" autocomplete="name">
+        </label>
+        <label>Email
+          <input name="email" type="email" required maxlength="150" autocomplete="email">
+        </label>
+        <label>Message
+          <textarea name="message" required maxlength="2000"></textarea>
+        </label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Envoyer le message</button>
+        <p id="contactMsg" class="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> Josué Bolombo</span>
+    <a href="#accueil">Retour en haut</a>
+  </div>
+</footer>
+
+<dialog id="reader" aria-label="Lecture"><div class="doc" id="readerBody"></div></dialog>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
